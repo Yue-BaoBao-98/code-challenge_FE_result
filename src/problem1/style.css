@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form_text {
+    font-size: 1.8rem;
+}
+.safe_integer {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#input_number {
+    font-size: 2.2rem;
+    min-width: 100px;
+}
+
+.calculate {
+    font-size: 2.4rem;
+    font-weight: 600;
+    max-width: fit-content;
+    margin-top: 24px;
+    padding: 8px 12px;
+    color: #333;
+    background-color: #fa5a0a;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.calculate:hover {
+    background-color: #f09161;
+}
+
+.text_result {
+    font-size: 2.4rem;
+    font-weight: 550;
+}
+
+.text_result span {
+    font-size: 2.4rem;
+    font-weight: 800;
+}

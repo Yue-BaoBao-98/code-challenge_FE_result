@@ -1,0 +1,88 @@
+/* =========================================================== */
+/* Setup base value for whole web  */
+/* =========================================================== */
+:root {
+    --primary_color: #fa5a0a;
+    --primary_light_color: #f09161;
+
+    --white_color: #fff;
+    --black_color: #000;
+    --blue_btn_color: #006ce0;
+    --black_text: #333;
+    --grey_text: #555;
+
+    --light_gray_color: #f7f7f7;
+    --dark_gray_color: #a4a4a4;
+    --gray_color: #dbdbdb;
+    --grey_color: #cfcfcf;
+
+    --blur_box_shadow: rgba(0, 0, 0, 0.3);
+    --gold_color: #ffbe1a;
+    --bottom_header_color: #05141f;
+
+    --header_height: 45vh;
+    --form_max_width: 1200px;
+    --form_min_height: 200px;
+    --form_padding: 32px;
+    --inp_height: 84px;
+    --inp_width: 320px;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+/* =========================================================== */
+/* Setup for Column */
+/* =========================================================== */
+.row {
+    margin: 0 -8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    padding: 0 8px;
+}
+
+/* =========================================================== */
+/* Setup for ELEMENTS */
+/* =========================================================== */
+
+.primary_inp_wrapper {
+    width: var(--inp_width);
+    height: var(--inp_height);
+    border-radius: 16px;
+    border: 2px solid var(--grey_color);
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.primary_inp_wrapper:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.primary_inp_wrapper:hover,
+.primary_inp_wrapper:hover > .primary_inp {
+    background-color: var(--light_gray_color);
+}
+
+.primary_inp {
+    border-color: transparent;
+    outline: none;
+    padding: 8px;
+    width: 100%;
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--black_text);
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Problem 1: Three ways to sum to n</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="controller">
+                <label class="form_text" for="input_number"
+                    >Input number to sum (less than <span class="safe_integer">90</span>):
+                </label>
+                <input type="text" id="input_number" required />
+            </div>
+            <button type="submit" class="calculate">Calculate</button>
+
+            <div class="result">
+                <h1 class="text_result">Result for 1st way: <span class="result_1"></span></h1>
+                <h1 class="text_result">Result for 2nd way: <span class="result_2"></span></h1>
+                <h1 class="text_result">Result for 3rd way: <span class="result_3"></span></h1>
+            </div>
+        </div>
+    </body>
+    <script src="./main.js"></script>
+</html>

@@ -1,17 +1,32 @@
 <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Fancy Form</title>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fancy Form</title>
+        <!-- NORMALIZE CSS  -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- FONTAWESOME  -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- You may add more stuff here -->
+        <link href="./base.css" rel="stylesheet" />
+        <link href="./style.css" rel="stylesheet" />
+    </head>
 
-  <!-- You may add more stuff here -->
-  <link href="style.css" rel="stylesheet" />
-</head>
-
-<body>
-
-  <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
+    <body>
+        <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
+        <!-- <form onsubmit="return !1">
     <h5>Swap</h5>
     <label for="input-amount">Amount to send</label>
     <input id="input-amount" />
@@ -20,8 +35,64 @@
     <input id="output-amount" />
 
     <button>CONFIRM SWAP</button>
-  </form>
-  <script src="script.js"></script>
-</body>
+  </form> -->
 
+        <div class="header">
+            <h1 class="header__title">Currency Converter</h1>
+        </div>
+
+        <div class="wrapper">
+            <div class="form">
+                <div class="main_form">
+                    <div class="row">
+                        <div class="col">
+                            <div class="amount primary_inp_wrapper">
+                                <label for="" class="amount_label">Amount</label>
+                                <input type="text" id="amount_inp" class="amount_inp primary_inp" required />
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="base primary_inp_wrapper">
+                                <input
+                                    type="text"
+                                    id="base_currency_inp"
+                                    class="base_currency_inp primary_inp currency_inp"
+                                    list="base_currencies"
+                                    name="base_currencies"
+                                    required
+                                    autocomplete="off"
+                                />
+                                <span class="floating_label">From</span>
+                                <datalist id="base_currencies"> </datalist>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="target primary_inp_wrapper">
+                                <input
+                                    type="text"
+                                    id="target_currency_inp"
+                                    class="target_currency_inp primary_inp currency_inp"
+                                    list="target_currencies"
+                                    name="target_currencies"
+                                    required
+                                    autocomplete="off"
+                                />
+                                <span class="floating_label">To</span>
+                                <datalist id="target_currencies"> </datalist>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controller_form">
+                    <div class="result"></div>
+
+                    <button type="submit" class="convert_btn">CONVERT</button>
+                </div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
 </html>
